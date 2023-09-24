@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".locOutlet"
+    android:orientation="vertical"
+    android:background="#171717">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:fontFamily="@font/ksfont"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="LOKASI OUTLET"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jangan lupa mampir ya!"
+            android:fontFamily="@font/ksfont"
+            android:textSize="14dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="15dp"/>
+
+        <fragment
+            android:layout_width="345dp"
+            android:layout_height="450dp"
+            android:layout_marginLeft="25dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map" />
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-25dp"
+        android:background="@color/bg_fragment"
+        app:itemIconTint="@drawable/bottom_navigation_icon_color"
+        app:menu="@menu/menu_fragment"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</LinearLayout>
